@@ -37,6 +37,8 @@ web.config
 appsettings.Local.json
 appsettings.Production.json
 secrets.json
+appsettings.json
+appsettings.Development.json
 
 ## Logs
 *.log
