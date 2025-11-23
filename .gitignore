@@ -1,0 +1,45 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio & IDEs
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Unit Test Results
+TestResults/
+*.trx
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Publish folder (khi bạn build ra file chạy)
+[Pp]ublish/
+web.config
+
+## Appsettings & Secrets
+# Chú ý: appsettings.json và appsettings.Development.json THƯỜNG được commit 
+# để team có cấu hình chung.
+# Chỉ ignore những file chứa mật khẩu thật hoặc cấu hình riêng của máy bạn.
+appsettings.Local.json
+appsettings.Production.json
+secrets.json
+
+## Logs
+*.log
+
+## Entity Framework Core (nếu có file sinh ra tạm)
+migration_script.sql
