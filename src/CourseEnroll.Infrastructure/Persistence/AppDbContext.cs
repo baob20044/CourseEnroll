@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using CourseEnroll.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CourseEnroll.Infrastructure
+namespace CourseEnroll.Infrastructure.Persistence
 {
     public class AppDbContext : DbContext
     {
@@ -22,6 +22,16 @@ namespace CourseEnroll.Infrastructure
             modelBuilder.Entity<Course>()
             .Property(p => p.Price)
             .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Student>()
+            .HasMany(s => s.Enrollments)
+            .WithOne()
+            .HasForeignKey(e => e.StudentId);
+
+            modelBuilder.Entity<Course>()
+            .HasMany(s => s.Enrollments)
+            .WithOne()
+            .HasForeignKey(e => e.CourseId);
         }
     }
 }

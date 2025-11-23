@@ -1,4 +1,6 @@
+using CourseEnroll.Application;
 using CourseEnroll.Infrastructure;
+using CourseEnroll.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace CourseEnroll
@@ -9,6 +11,8 @@ namespace CourseEnroll
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddInfrastructure();
+            builder.Services.AddApplication();
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();

@@ -13,5 +13,7 @@ namespace CourseEnroll.Domain.Entities
         public decimal Price { get; set; }
         public DateOnly CreatedDate { get; set; }
         public string IntructorName { get; set; } = string.Empty;
+
+        public ICollection<Enrollment>? Enrollments { get; set; }
     }
 }

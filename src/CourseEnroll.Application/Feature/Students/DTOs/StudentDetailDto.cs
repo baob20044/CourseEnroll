@@ -1,12 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace CourseEnroll.Domain.Entities
+namespace CourseEnroll.Application.Feature.Students.DTOs
 {
-    public class Student
+    public class StudentDetailDto
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; } = string.Empty;
@@ -14,6 +13,5 @@ namespace CourseEnroll.Domain.Entities
         public string Email { get; set; } = string.Empty;
         public DateOnly DateOfBirth { get; set; }
         public string Address { get; set; } = string.Empty;
-        public ICollection<Enrollment>? Enrollments { get; set; }
     }
 }
